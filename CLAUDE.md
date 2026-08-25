@@ -52,3 +52,8 @@ timing/progress plus the list of per-batch results.
 When extending this project (e.g., replacing mock data with real scraped reviews, adding a CLI/API layer,
 or persisting results), keep the Pydantic schema in `engine.py` as the single definition that both the
 sync and async paths import — don't fork a second copy of the models.
+
+## Workflow
+
+Every code change must happen on a feature branch, never directly on `main`. Before editing any files,
+create (or switch to) a feature branch off `main`, then commit and open a PR from there.
