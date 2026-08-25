@@ -53,7 +53,12 @@ When extending this project (e.g., replacing mock data with real scraped reviews
 or persisting results), keep the Pydantic schema in `engine.py` as the single definition that both the
 sync and async paths import — don't fork a second copy of the models.
 
-## Workflow
+## Core Principles
+**IMPORTANT**: Whenever you write code, it MUST follow SOLID design principles. Never write code that violates these principles. If you do, you will be asked to refactor it.
 
-Every code change must happen on a feature branch, never directly on `main`. Before editing any files,
-create (or switch to) a feature branch off `main`, then commit and open a PR from there.
+## Development Workflow
+1. Before making any changes, create and checkout a feature branch named `feature-[brief-description]`
+2. Write comprehensive tests for all new functionality
+3. Compile code and run all tests before committing
+4. Write detailed commit messages explaining the changes and rationale
+5. Commit all changes to the feature branch
