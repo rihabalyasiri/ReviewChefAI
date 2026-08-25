@@ -33,3 +33,13 @@ by processing multiple batches concurrently and reports total execution time.
   batches and processes them concurrently with `asyncio.gather` for better throughput.
 
 Both scripts currently run against a hardcoded `mock_reviews` sample list rather than real scraped data.
+
+## Services
+
+- `services/review-fetcher-service/` — fetches a restaurant's Google reviews for a given month and stores
+  them in Redis. See its own README for API, setup, and known limitations of the Google Places API.
+- `services/analysis-service/`, `services/api-gateway/` — planned services, not yet implemented.
+
+```bash
+docker compose up   # runs Redis + review-fetcher-service together
+```
